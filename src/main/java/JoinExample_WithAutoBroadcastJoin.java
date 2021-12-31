@@ -2,9 +2,9 @@ import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
 import org.apache.spark.sql.SparkSession;
 
-public class MultiJoinExample {
+public class JoinExample_WithAutoBroadcastJoin {
     public static void main(String[] args) {
-        MultiJoinExample joinExample = new MultiJoinExample();
+        JoinExample_WithAutoBroadcastJoin joinExample = new JoinExample_WithAutoBroadcastJoin();
         joinExample.start();
     }
 
@@ -17,10 +17,6 @@ public class MultiJoinExample {
         System.out.println("spark.conf.autoBroadcastJoinThreshold-------->"+spark.conf().get("spark.sql.autoBroadcastJoinThreshold"));
 
         System.out.println("-----------------------------------------------------------------------------------------");
-
-        //Disable autoBroadcastJoinThreshold join
-        spark.conf().set("spark.sql.autoBroadcastJoinThreshold",-1);
-        System.out.println("spark.conf.autoBroadcastJoinThreshold (After Disable)-------->"+spark.conf().get("spark.sql.autoBroadcastJoinThreshold"));
 
        // :Loading Emp Master Data
         Dataset<Row> empMasterDS=spark.read()

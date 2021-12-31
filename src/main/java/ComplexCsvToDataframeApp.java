@@ -3,17 +3,21 @@ import org.apache.spark.sql.Row;
 import org.apache.spark.sql.SparkSession;
 
 /**
- * CSV ingestion in a dataframe.
+ * CSV ingestion in a dataframe for GCP Plateform
+ * This example is to demo the data load using csv in GCP platform
  * 
- * @author jgp
+ *
  */
 public class ComplexCsvToDataframeApp {
 
   /**
    * main() is your entry point to the application.
-   * 
+   * // test comment
    * @param args
    */
+
+
+
   public static void main(String[] args) {
     ComplexCsvToDataframeApp app = new ComplexCsvToDataframeApp();
     app.start();
